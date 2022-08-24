@@ -1,0 +1,139 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #7abdc9;
+  color: #444444;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-family: funkydori, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fddc22;
+  font-size: 5rem;
+  padding: 1rem;
+  line-height: 0;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  padding: 0.3rem 1.5rem;
+}
+
+footer {
+  margin-top: 1rem;
+}
+
+i {
+    color: #fff;
+    align-self: center;
+    font-size: 1.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 1rem 12rem;
+}
+
+.etch-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: 80vh;
+  border-radius: 3rem;
+  background-color: #cf4a4a;
+  padding: 0 3rem 2rem 3rem;
+  border: 1px solid red;
+  box-shadow: 0px 0px 20px rgba(81, 147, 158, 0.808);
+}
+
+.sketch {
+  background-color: rgb(167, 167, 167);
+  width: 100%;
+  height: 100%;
+  border-radius: 0.2rem;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+  max-width: fit-content;
+}
+
+.pen-size {
+  display: flex;
+  gap: 0.5rem;
+
+  button {
+    background-color: #fff;
+    border: none;
+    border-radius: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color:#961919;
+    transition: 300ms ease-in-out;
+
+    &:hover {
+        background-color: #f8b809;
+      }
+  }
+}
+
+.pen-colors {
+  display: flex;
+  gap: 0.5rem;
+
+  button {
+    background-color: #fff;
+    border: none;
+    border-radius: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color:#961919;
+    transition: 300ms ease-in-out;
+
+    &:hover {
+        background-color: #f8b809;
+      }
+  }
+}
+
+.pen-erase {
+  button {
+    background-color: transparent;
+    border: none;
+    border-radius: 0.5rem;
+    margin: .3rem;
+    padding: 0;
+    transition: 300ms ease-in-out;
+
+    &:hover {
+        transform: rotate(10deg);
+    }
+
+    i {
+        color: #f8b809;
+    }
+  }
+}
