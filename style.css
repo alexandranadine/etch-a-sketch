@@ -5,14 +5,12 @@
 
 html {
   height: 100%;
-  width: 100%;
   font-size: 16px;
 }
 
 body {
   height: 100%;
-  width: 100%;
-  background-color: #7abdc9;
+  background-color: #7ac9c5;
   color: #444444;
 }
 
@@ -30,14 +28,11 @@ h1 {
   padding: 1rem;
   line-height: 0;
   margin-bottom: 0.5rem;
+  text-shadow: 2px 2px #b92c2c;
 }
 
 button {
-  padding: 0.3rem 1.5rem;
-}
-
-footer {
-  margin-top: 1rem;
+  padding: 0.3rem 1.3rem;
 }
 
 i {
@@ -46,14 +41,16 @@ i {
   font-size: 1.5rem;
 }
 
+footer {
+  margin-top: 1rem;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 100%;
-  padding: 1rem 12rem;
 }
 
 .etch-main {
@@ -61,11 +58,11 @@ i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
-  height: 60%;
-  border-radius: 3rem;
-  background-color: #f53d3d;
-  padding: 0 3rem 2rem 3rem;
+  width: 850px;
+  height: 850px;
+  border-radius: 2.5rem;
+  background-color: #fc4646;
+  padding: 1rem 4rem;
   box-shadow: 0px 0px 20px rgba(81, 147, 158, 0.808);
 }
 
@@ -73,15 +70,17 @@ i {
   display: grid;
   grid-template-columns: repeat(var(--grid-col), 1fr);
   grid-template-rows: repeat(var(--grid-row), 1fr);
-  background-color: rgb(189, 189, 189);
+  background-color: #dbdbdb;
   width: 100%;
   height: 100%;
-  border-radius: 0.2rem;
+  overflow: hidden;
 }
 
 .cells {
-  border-top: 1px solid #a7a7a7;
-  border-right: 1px solid #a7a7a7;
+  border-left: 1px solid #b9b9b9;
+  border-bottom: 1px solid #b9b9b9;
+  min-width: 20px;
+  min-height: 20px;
 }
 
 .options {
@@ -93,49 +92,26 @@ i {
   max-width: fit-content;
 }
 
-.pen-size {
+.pen-size, .pen-colors {
   display: flex;
   gap: 0.5rem;
 }
-.pen-size .active {
+.pen-size .active, .pen-colors .active {
   background-color: #f8b809;
 }
-.pen-size .active:hover {
+.pen-size .active:hover, .pen-colors .active:hover {
   background-color: #ffd768;
 }
-.pen-size button {
+.pen-size button, .pen-colors button {
   background-color: #fff;
   border: none;
   border-radius: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
-  color: #961919;
+  color: #b92c2c;
   transition: 300ms ease-in-out;
 }
-.pen-size button:hover {
-  background-color: #f8b809;
-}
-
-.pen-colors {
-  display: flex;
-  gap: 0.5rem;
-}
-.pen-colors .active {
-  background-color: #f8b809;
-}
-.pen-colors .active:hover {
-  background-color: #ffd768;
-}
-.pen-colors button {
-  background-color: #fff;
-  border: none;
-  border-radius: 1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #961919;
-  transition: 300ms ease-in-out;
-}
-.pen-colors button:hover {
+.pen-size button:hover, .pen-colors button:hover {
   background-color: #f8b809;
 }
 
@@ -155,6 +131,14 @@ i {
 }
 .pen-erase button i:hover {
   color: #ffd768;
+}
+
+.pen-color-dark {
+  background-color: #2e2e2e;
+}
+
+.active-e {
+  color: #fff !important;
 }
 
 /*# sourceMappingURL=style.css.map */
