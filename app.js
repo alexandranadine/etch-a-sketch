@@ -11,9 +11,6 @@ const buttonClr = document.querySelector("#pen-clr");
 // const eraser = document.querySelector("#eraser");
 const erase = document.querySelector(".fa-eraser");
 
-
-
-
 // --------------GRID CREATION-------------- //
 function createGrid(row, col) {
   container.style.setProperty("--grid-row", row);
@@ -22,6 +19,10 @@ function createGrid(row, col) {
   for (i = 0; i < row * col; i++) {
     let cell = document.createElement("div");
     container.appendChild(cell).className = "cells";
+
+    cell.addEventListener("mouseover", (e) =>
+      e.target.classList.add("pen-color-dark")
+    );
   }
 }
 
@@ -57,39 +58,34 @@ buttonDrk.addEventListener("click", function () {
   buttonDrk.classList.add("active");
   buttonLgt.classList.remove("active");
   buttonClr.classList.remove("active");
-  erase.classList.remove("active-e");
 });
 
 buttonLgt.addEventListener("click", function () {
   buttonLgt.classList.add("active");
   buttonDrk.classList.remove("active");
   buttonClr.classList.remove("active");
-  erase.classList.remove("active-e");
 });
 
 buttonClr.addEventListener("click", function () {
   buttonClr.classList.add("active");
   buttonDrk.classList.remove("active");
   buttonLgt.classList.remove("active");
-  erase.classList.remove("active-e");
 });
 
 // --------------ERASE BUTTON-------------- //
 erase.addEventListener("click", function () {
-  erase.classList.add("active-e");
   eraseGrid();
+  createGrid(64, 64);
 });
 
 function eraseGrid() {
   let clear = document.querySelectorAll(".cells");
-  clear.forEach((item) => {
-    item.style.backgroundColor = "#dbdbdb";
+  clear.forEach((cell) => {
+    cell.remove();
   });
 }
 
-
-
-createGrid(28, 28);
+createGrid(64, 64);
 
 // 16x16, 28x28, 64x64
 
