@@ -79,8 +79,8 @@ footer {
 .cells {
   border-left: 1px solid #b9b9b9;
   border-bottom: 1px solid #b9b9b9;
-  min-width: 20px;
-  min-height: 20px;
+  min-width: 10px;
+  min-height: 10px;
 }
 
 .options {
@@ -92,17 +92,21 @@ footer {
   max-width: fit-content;
 }
 
-.pen-size, .pen-colors {
+.pen-size,
+.pen-colors {
   display: flex;
   gap: 0.5rem;
 }
-.pen-size .active, .pen-colors .active {
+.pen-size .active,
+.pen-colors .active {
   background-color: #f8b809;
 }
-.pen-size .active:hover, .pen-colors .active:hover {
+.pen-size .active:hover,
+.pen-colors .active:hover {
   background-color: #ffd768;
 }
-.pen-size button, .pen-colors button {
+.pen-size button,
+.pen-colors button {
   background-color: #fff;
   border: none;
   border-radius: 1rem;
@@ -111,7 +115,8 @@ footer {
   color: #b92c2c;
   transition: 300ms ease-in-out;
 }
-.pen-size button:hover, .pen-colors button:hover {
+.pen-size button:hover,
+.pen-colors button:hover {
   background-color: #f8b809;
 }
 
@@ -135,6 +140,10 @@ footer {
 
 .pen-color-dark {
   background-color: #2e2e2e;
+}
+
+.pen-color-light {
+  background-color: #5f5f5f;
 }
 
 .active-e {
